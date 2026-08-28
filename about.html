@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — REVID</title>
+    <meta name="description" content="REVID is building the diagnostic companion that helps everyday drivers know whether to fix a vehicle themselves or call a shop." />
+    <meta name="theme-color" content="#d9560c" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23E8600A'/%3E%3Cpath d='M10 22V10l9 6-9 6z' fill='%23151311'/%3E%3Cpath d='M21.5 9.5a8 8 0 010 13' stroke='%23151311' stroke-width='1.6' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,500,800&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header is-scrolled">
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="REVID home">
+          <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--color-primary)"/><path d="M10 22V10l9 6-9 6z" fill="var(--color-bg)"/><path d="M21.5 9.5a8 8 0 010 13" stroke="var(--color-bg)" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+          <span class="brand-name">REVID</span>
+        </a>
+        <div class="header__actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+          <a class="btn btn--primary" href="https://www.perplexity.ai/computer/a/revid-CUBBGWYcSwKkNZOk7TjBsw" target="_blank" rel="noopener noreferrer">Launch REVID</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="legal">
+        <div class="container prose">
+          <p class="eyebrow">About</p>
+          <h1 class="legal__title">We're putting the diagnostic in the driver's hands.</h1>
+          <p class="legal__meta">REVID, Inc. · Wyoming, U.S.</p>
+
+          <p>REVID was built around a simple frustration: a check-engine light shouldn't cost a hundred-plus dollars and a trip across town just to learn what it means. The data is already sitting in your vehicle — the OBD-II port has been standard on U.S. passenger cars since 1996. We just hadn't been given a good way to read it and understand it.</p>
+
+          <h2>What we're building</h2>
+          <p>REVID is a diagnostic companion that reads your vehicle's live data and stored codes and turns them into plain-English guidance: a likely cause, a fix path, a cost estimate, and a clear call on whether the job is a safe DIY or one to hand to a pro. It runs in a browser, pairs with an inexpensive Bluetooth adapter, and is built around the everyday driver — not the shop.</p>
+
+          <h2>Where we are</h2>
+          <p>REVID is in early access. We're refining the experience with real drivers, adding to our code library, and improving the guidance engine. There's no paid plan yet — early users can try it free during launch.</p>
+
+          <h2>What we believe</h2>
+          <ul>
+            <li>Drivers deserve to understand their own vehicles without paying for a guess.</li>
+            <li>Guidance should be matched to your skill — not push you into repairs you can't safely do.</li>
+            <li>Your data is yours. We never sell it.</li>
+          </ul>
+
+          <h2>Get in touch</h2>
+          <p>Questions, feedback, or vehicle data to share? Visit our <a href="contact.html">contact page</a> or email <a href="mailto:support@revidinc.com">support@revidinc.com</a>.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__bottom" style="margin-top:0;border-top:none;padding-top:0">
+          <span>© 2026 REVID, Inc. · revidinc.com</span>
+          <nav class="footer__links" aria-label="Legal and company" style="justify-content:flex-end">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+        <p class="footer__disclaimer">REVID gives general guidance only and is not a substitute for a professional inspection. When in doubt, consult a qualified mechanic.</p>
+      </div>
+    </footer>
+
+    <script>
+      (function(){var r=document.documentElement;var t=document.querySelector('[data-theme-toggle]');var d=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';r.setAttribute('data-theme',d);if(t){t.addEventListener('click',function(){d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);t.setAttribute('aria-label','Switch to '+(d==='dark'?'light':'dark')+' mode');});}})();
+    </script>
+  </body>
+</html>

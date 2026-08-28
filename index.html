@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REVID — Know Before You Wrench or Call a Shop</title>
+    <meta name="description" content="REVID reads your check-engine codes and live vehicle data, then gives you a likely cause, a fix path, and a cost estimate matched to your skill — so you know whether to DIY or call a shop." />
+    <meta name="theme-color" content="#d9560c" />
+    <meta property="og:title" content="REVID — Know Before You Wrench or Call a Shop" />
+    <meta property="og:description" content="Read your check-engine codes and live vehicle data, get a likely cause, a fix path, and a cost estimate matched to your skill." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23E8600A'/%3E%3Cpath d='M10 22V10l9 6-9 6z' fill='%23151311'/%3E%3Cpath d='M21.5 9.5a8 8 0 010 13' stroke='%23151311' stroke-width='1.6' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,500,800&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="#main" class="sr-only" style="position:absolute;left:-9999px;top:0;z-index:100;">Skip to content</a>
+
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="REVID home">
+          <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="7" fill="var(--color-primary)"/>
+            <path d="M10 22V10l9 6-9 6z" fill="var(--color-bg)"/>
+            <path d="M21.5 9.5a8 8 0 010 13" stroke="var(--color-bg)" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+          </svg>
+          <span class="brand-name">REVID</span>
+        </a>
+        <nav class="header__nav" aria-label="Primary">
+          <a href="#how">How it works</a>
+          <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="header__actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a class="btn btn--primary" href="https://www.perplexity.ai/computer/a/revid-CUBBGWYcSwKkNZOk7TjBsw" target="_blank" rel="noopener noreferrer">Launch REVID</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero__grid">
+            <div data-reveal>
+              <p class="eyebrow"><span class="dot"></span> Diagnose · Decide · Save</p>
+              <h1 class="hero__title">Know before you wrench or call a shop.</h1>
+              <p class="hero__sub">REVID reads your check-engine codes and live vehicle data, then gives you a likely cause, a fix path, and a cost estimate — matched to your skill level. So you know whether to fix it yourself or hand it off.</p>
+              <div class="hero__cta">
+                <a class="btn btn--primary btn--lg" href="https://www.perplexity.ai/computer/a/revid-CUBBGWYcSwKkNZOk7TjBsw" target="_blank" rel="noopener noreferrer">Launch REVID — free in early access</a>
+                <a class="btn btn--ghost btn--lg" href="#how">See how it works</a>
+              </div>
+              <ul class="hero__trust" role="list">
+                <li><span class="dot"></span> No shop diagnostic fees</li>
+                <li><span class="dot"></span> Runs in your browser</li>
+                <li><span class="dot"></span> We never sell your data</li>
+              </ul>
+            </div>
+
+            <!-- Mock diagnostic dashboard -->
+            <div data-reveal>
+              <div class="dash" role="img" aria-label="REVID diagnostic dashboard showing live engine readings and a likely cause">
+                <div class="dash__bar">
+                  <span class="dash__vin">2018 Civic · 1.5T</span>
+                  <span class="dash__live"><span class="dot"></span> Live</span>
+                </div>
+                <div class="dash__body">
+                  <div class="gauges">
+                    <div class="gauge">
+                      <div class="gauge__label">RPM</div>
+                      <div class="gauge__value">812<span class="gauge__unit">/min</span></div>
+                    </div>
+                    <div class="gauge">
+                      <div class="gauge__label">Coolant</div>
+                      <div class="gauge__value">167<span class="gauge__unit">°F</span></div>
+                    </div>
+                    <div class="gauge">
+                      <div class="gauge__label">Engine load</div>
+                      <div class="gauge__value">24<span class="gauge__unit">%</span></div>
+                    </div>
+                    <div class="gauge">
+                      <div class="gauge__label">Fuel trim</div>
+                      <div class="gauge__value">-3.1<span class="gauge__unit">%</span></div>
+                    </div>
+                  </div>
+                  <div class="diag">
+                    <div class="diag__head">
+                      <span class="chip chip--warn">P0128</span> Coolant below thermostat temp
+                    </div>
+                    <p class="diag__cause">Likely cause: thermostat stuck open</p>
+                    <p class="diag__verdict"><span class="chip chip--ok">DIY-friendly</span> Hand-off to a shop not required</p>
+                    <div class="cost">
+                      <span class="cost__label">Estimated parts + labor</span>
+                      <span class="cost__value">$45–90</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROBLEM -->
+      <section class="section problem">
+        <div class="container">
+          <div class="problem__grid">
+            <div data-reveal>
+              <p class="eyebrow">The problem</p>
+              <h2 class="problem__title">A check-engine light shouldn't cost <em>$150 to guess at.</em></h2>
+              <p class="section-lead" style="margin-top:var(--space-4)">The light comes on. The shop pulls a code in two minutes, hands you a vague estimate, and leaves you wondering whether it's a $20 sensor or a $2,000 repair. REVID puts the same data in your hands — with a plain-English read on what's likely wrong and what to do next.</p>
+            </div>
+            <div data-reveal style="display:grid;gap:var(--space-6);align-content:center">
+              <div class="stat">
+                <span class="stat__num">$80–150</span>
+                <span class="stat__cap">Typical shop diagnostic fee, before any repair</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">~10 min</span>
+                <span class="stat__cap">From plugging in to a likely cause and cost</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="section" id="how">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">How it works</p>
+            <h2 class="section-title">Three steps from code to confidence.</h2>
+            <p class="section-lead">No mechanics degree required. If you can plug in a dongle and tap a screen, you can use REVID.</p>
+          </div>
+          <ol class="steps" role="list">
+            <li class="step" data-reveal>
+              <span class="step__num">1</span>
+              <h3 class="step__title">Connect</h3>
+              <p class="step__text">Plug a Bluetooth OBD-II dongle into the port under your dash, then open REVID in Chrome or Edge on your phone or laptop.</p>
+            </li>
+            <li class="step" data-reveal>
+              <span class="step__num">2</span>
+              <h3 class="step__title">Read live data</h3>
+              <p class="step__text">REVID pulls stored codes and live engine readings — RPM, coolant temp, fuel trim, load, and more — straight from your vehicle.</p>
+            </li>
+            <li class="step" data-reveal>
+              <span class="step__num">3</span>
+              <h3 class="step__title">Decide DIY or shop</h3>
+              <p class="step__text">Get a likely cause, a fix path, a cost estimate, and a clear call on whether it's a safe DIY job or one to hand to a pro.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- WHAT YOU NEED -->
+      <section class="section section--tight" style="background:var(--color-surface)">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">What you need</p>
+            <h2 class="section-title">Three things to get started.</h2>
+          </div>
+          <div class="need">
+            <div class="need__item" data-reveal>
+              <svg class="need__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+              <div>
+                <p class="need__title">Phone or laptop</p>
+                <p class="need__text">Chrome or Edge on Android, Windows, or macOS. iOS browsers don't support the direct Bluetooth connection REVID uses.</p>
+              </div>
+            </div>
+            <div class="need__item" data-reveal>
+              <svg class="need__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M5 5l14 14M19 5L5 19"/></svg>
+              <div>
+                <p class="need__title">A Bluetooth OBD-II dongle</p>
+                <p class="need__text">An inexpensive ELM327 BLE adapter (~$25–45) plugs into your vehicle's port and talks to REVID wirelessly.</p>
+              </div>
+            </div>
+            <div class="need__item" data-reveal>
+              <svg class="need__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h2l2-6 4 12 3-9 2 3h5"/></svg>
+              <div>
+                <p class="need__title">An OBD-II vehicle</p>
+                <p class="need__text">Designed for most U.S. passenger vehicles sold 1996 and newer, which use the standard OBD-II port.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHO IT'S FOR -->
+      <section class="section" id="audience">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">Who it's for</p>
+            <h2 class="section-title">Built for people who'd rather know than guess.</h2>
+          </div>
+          <div class="features">
+            <div class="feature" data-reveal>
+              <h3 class="feature__title">DIY drivers</h3>
+              <p class="feature__text">You do your own oil and brakes. REVID tells you whether the next fix is in your lane or above your pay grade.</p>
+            </div>
+            <div class="feature" data-reveal>
+              <h3 class="feature__title">First-time car owners</h3>
+              <p class="feature__text">The check-engine light is scary when you don't know what it means. Get a plain-English read before you call anyone.</p>
+            </div>
+            <div class="feature" data-reveal>
+              <h3 class="feature__title">Used-car buyers</h3>
+              <p class="feature__text">Plug in during the test drive and read live data before you commit — no shop visit required.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="section" id="features" style="background:var(--color-surface)">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">Features</p>
+            <h2 class="section-title">A diagnostic toolkit in your browser.</h2>
+            <p class="section-lead">Everything you need to read the code, understand it, and decide what to do.</p>
+          </div>
+          <div class="features">
+            <div class="feature" data-reveal>
+              <svg class="feature__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a7 7 0 0 0-4 12.7V18a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-3.3A7 7 0 0 0 12 2z"/><line x1="9" y1="22" x2="15" y2="22"/></svg>
+              <h3 class="feature__title">AI-assisted diagnosis</h3>
+              <p class="feature__text">Codes plus live readings get turned into a likely cause and a fix path in plain English — not a table of hex.</p>
+            </div>
+            <div class="feature" data-reveal>
+              <svg class="feature__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+              <h3 class="feature__title">Live OBD-II data</h3>
+              <p class="feature__text">RPM, coolant temp, engine load, throttle, fuel trim, MAP, MAF and more — streaming live from your engine.</p>
+            </div>
+            <div class="feature" data-reveal>
+              <svg class="feature__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <h3 class="feature__title">Cost estimates</h3>
+              <p class="feature__text">See typical parts and labor ranges for a likely repair before you talk to a shop, so you know what fair looks like.</p>
+            </div>
+            <div class="feature" data-reveal>
+              <svg class="feature__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              <h3 class="feature__title">Vehicle comparison</h3>
+              <p class="feature__text">Stack models side by side on reliability, common issues, and expected upkeep before you buy.</p>
+            </div>
+            <div class="feature" data-reveal>
+              <svg class="feature__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L3 7v6c0 5 3.8 8 9 9 5.2-1 9-4 9-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
+              <h3 class="feature__title">Skill-matched calls</h3>
+              <p class="feature__text">Recommendations are matched to your comfort level — clearly flagged DIY-friendly, or better left to a pro.</p>
+            </div>
+            <div class="feature" data-reveal>
+              <svg class="feature__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="9" y1="9" x2="9" y2="15"/><line x1="15" y1="9" x2="15" y2="15"/></svg>
+              <h3 class="feature__title">Code library</h3>
+              <p class="feature__text">A growing library of OBD-II codes with causes, symptoms, and fix notes you can search anytime.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT REVID IS NOT -->
+      <section class="section section--tight">
+        <div class="container">
+          <div class="callout" data-reveal>
+            <p class="callout__title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+              What REVID is not
+            </p>
+            <p class="callout__text">REVID gives general guidance to help you decide whether to DIY or call a shop. It is not a substitute for a professional inspection, and it cannot guarantee a diagnosis. For anything involving brakes, steering, airbags, or fuel systems — or any repair you're not confident about — stop and consult a qualified mechanic.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EARLY ACCESS -->
+      <section class="section">
+        <div class="container">
+          <div class="band" data-reveal>
+            <p class="eyebrow">Early access</p>
+            <h2 class="band__title">REVID is free during launch.</h2>
+            <p class="band__text">We're in early access and refining the experience with real drivers. No paid plan yet, no credit card to start — just plug in and try it.</p>
+            <a class="btn btn--primary btn--lg" href="https://www.perplexity.ai/computer/a/revid-CUBBGWYcSwKkNZOk7TjBsw" target="_blank" rel="noopener noreferrer">Launch REVID</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq" style="background:var(--color-surface)">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">FAQ</p>
+            <h2 class="section-title">Questions, answered.</h2>
+          </div>
+          <div class="faq">
+            <details data-reveal>
+              <summary>What vehicles does REVID work with?</summary>
+              <p class="faq__a">REVID is designed for most U.S. passenger vehicles from 1996 and newer, which use the standard OBD-II port. Heavy-duty diesel and some hybrid/electric powertrains may report differently; compatibility varies by vehicle and adapter.</p>
+            </details>
+            <details data-reveal>
+              <summary>Which OBD-II dongle should I get?</summary>
+              <p class="faq__a">Any inexpensive ELM327 Bluetooth Low Energy (BLE) adapter works. Expect to spend roughly $25–45. Avoid Wi-Fi-only or cheap no-name adapters that don't follow the BLE standard — pairing and live data can be unreliable.</p>
+            </details>
+            <details data-reveal>
+              <summary>Does it work on iPhone?</summary>
+              <p class="faq__a">REVID uses direct browser Bluetooth, which Chrome and Edge on Android, Windows, and macOS support. iOS browsers don't currently support this connection, so use an Android device or a laptop instead.</p>
+            </details>
+            <details data-reveal>
+              <summary>Do you sell my data?</summary>
+              <p class="faq__a">No. We don't sell your personal or vehicle data. You can read the full details in our <a href="privacy.html">Privacy Policy</a>.</p>
+            </details>
+            <details data-reveal>
+              <summary>How accurate is the diagnosis?</summary>
+              <p class="faq__a">REVID turns your live data and codes into a likely cause and fix path — it's guidance, not a guarantee. Always confirm with a professional before spending on parts, especially for safety-critical systems.</p>
+            </details>
+            <details data-reveal>
+              <summary>When should I just call a mechanic?</summary>
+              <p class="faq__a">For brakes, steering, airbags, fuel systems, or any repair you're not confident about — call a qualified mechanic. REVID helps you know when a job is beyond your comfort level.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA BAND -->
+      <section class="section">
+        <div class="container">
+          <div class="cta-band" data-reveal>
+            <h2 class="cta-band__title">Stop guessing. Start knowing.</h2>
+            <p class="cta-band__text">Plug in, read your codes, and decide DIY or shop in minutes — no diagnostic fee.</p>
+            <a class="btn btn--primary btn--lg" href="https://www.perplexity.ai/computer/a/revid-CUBBGWYcSwKkNZOk7TjBsw" target="_blank" rel="noopener noreferrer">Launch REVID — free</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <a class="footer__brand brand" href="index.html" aria-label="REVID home">
+              <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <rect width="32" height="32" rx="7" fill="var(--color-primary)"/>
+                <path d="M10 22V10l9 6-9 6z" fill="var(--color-bg)"/>
+                <path d="M21.5 9.5a8 8 0 010 13" stroke="var(--color-bg)" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+              </svg>
+              <span class="brand-name">REVID</span>
+            </a>
+            <p class="footer__about">REVID is an automotive diagnostic companion that reads your vehicle's live data and helps you decide whether to fix it yourself or call a shop.</p>
+          </div>
+          <nav class="footer__links" aria-label="Legal and company">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+        <p class="footer__disclaimer">REVID gives general guidance only and is not a substitute for a professional inspection. When in doubt — especially for brakes, steering, or fuel systems — consult a qualified mechanic.</p>
+        <div class="footer__bottom">
+          <span>© 2026 REVID, Inc. · revidinc.com</span>
+          <span>Wyoming, U.S.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Theme toggle
+      (function () {
+        var root = document.documentElement;
+        var t = document.querySelector('[data-theme-toggle]');
+        var d = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+        root.setAttribute('data-theme', d);
+        if (t) {
+          t.addEventListener('click', function () {
+            d = d === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', d);
+            t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
+          });
+        }
+      })();
+
+      // Header shadow on scroll
+      (function () {
+        var h = document.getElementById('header');
+        var onScroll = function () { if (window.scrollY > 8) h.classList.add('is-scrolled'); else h.classList.remove('is-scrolled'); };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+
+      // Reveal on scroll
+      (function () {
+        var els = document.querySelectorAll('[data-reveal]');
+        if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (e) { io.observe(e); });
+      })();
+    </script>
+  </body>
+</html>
