@@ -33,20 +33,28 @@
         <div class="container prose">
           <p class="eyebrow">Legal</p>
           <h1 class="legal__title">Privacy Policy</h1>
-          <p class="legal__meta">Last updated: August 28, 2026</p>
+          <p class="legal__meta">Last updated: September 16, 2026</p>
 
-          <p>REVID ("REVID," "we," "us") respects your privacy. This policy explains what we collect, how we use it, and the choices you have. We are based in Wyoming, United States.</p>
+          <p>REVID LLC ("REVID," "we," "us," or "our") respects your privacy. This policy explains what we collect, how we use it, and the choices you have. We are a Wyoming limited liability company based in the United States.</p>
 
           <h2>What we collect</h2>
           <ul>
-            <li><strong>Vehicle data you choose to read.</strong> When you connect an OBD-II adapter, REVID may read diagnostic codes and live engine readings (such as RPM, coolant temperature, and fuel trim) that you request. This data is processed to provide your diagnosis and is associated with your session.</li>
-            <li><strong>Account information.</strong> If you create an account, we collect your email address and basic profile information you provide.</li>
-            <li><strong>Usage information.</strong> We collect limited analytics about how the service is used, such as which features are accessed, to improve the product.</li>
+            <li><strong>Account information.</strong> When you create an account, we collect your email address and a password. Passwords are stored as a salted hash (pbkdf2-sha256) and are never stored in plain text.</li>
+            <li><strong>Vehicle data you choose to save.</strong> Vehicles, symptoms, and diagnosis results you save to your garage are stored in our database and associated with your account.</li>
+            <li><strong>OBD-II data.</strong> When you connect a Bluetooth OBD-II adapter, diagnostic trouble codes and live sensor readings (such as RPM, coolant temperature, and fuel trim) are processed locally in your browser. If you use the AI chat feature, this data may be sent to our AI provider to generate diagnostic responses.</li>
+            <li><strong>AI chat content.</strong> The questions you ask the AI assistant and the guidance returned are associated with your session and usage counts.</li>
+            <li><strong>Recall lookup data.</strong> When you search for vehicle recalls, your vehicle information (including VIN, if entered) may be sent to the National Highway Traffic Safety Administration (NHTSA) recall database to retrieve relevant recall information.</li>
+            <li><strong>Payment information.</strong> When paid features become available, subscription status and billing details are processed through Stripe. We do not store your full credit card number — Stripe handles all payment data under PCI-compliant infrastructure.</li>
+            <li><strong>Usage information.</strong> We collect limited analytics about how the service is used, such as which features are accessed and message counts, to improve the product and enforce usage limits.</li>
+            <li><strong>Local storage.</strong> Your language, region, theme, and session token are stored in your browser (localStorage/sessionStorage). We do not use third-party tracking cookies.</li>
           </ul>
 
           <h2>How we use your data</h2>
           <ul>
-            <li>To provide diagnostic guidance, cost estimates, and vehicle comparison features.</li>
+            <li>To provide diagnostic guidance, cost estimates, vehicle comparisons, and recall lookups.</li>
+            <li>To save your vehicles and diagnosis history to your account.</li>
+            <li>To power the AI chat feature by sending your questions and vehicle data to our AI provider.</li>
+            <li>To process subscription payments through Stripe when paid features are available.</li>
             <li>To operate, maintain, and improve REVID.</li>
             <li>To communicate with you about your account or the service.</li>
           </ul>
@@ -55,25 +63,37 @@
           <p>We do not sell your personal or vehicle data to third parties. We do not rent or trade it for marketing purposes.</p>
 
           <h2>Data sharing</h2>
-          <p>We share information only as needed to operate the service — for example, with service providers who help us host, secure, or deliver REVID under written agreements — or when required by law.</p>
-
-          <h2>Data retention</h2>
-          <p>We keep your data only as long as needed to provide the service and as described here, or as required by law. You can request deletion of your account and associated data at any time.</p>
-
-          <h2>Your choices</h2>
+          <p>We share information only as needed to operate the service:</p>
           <ul>
-            <li>You can choose not to connect an adapter or read specific vehicle data.</li>
-            <li>You can request access to, correction of, or deletion of your personal data by contacting <a href="mailto:support@revidinc.com">support@revidinc.com</a>.</li>
+            <li><strong>AI provider (Perplexity AI).</strong> When you use the AI chat feature, your questions, vehicle symptoms, and OBD-II data may be sent to Perplexity AI to generate diagnostic responses.</li>
+            <li><strong>NHTSA.</strong> Vehicle and VIN information may be sent to the NHTSA recall database when you search for recalls.</li>
+            <li><strong>Stripe.</strong> Payment and subscription data is processed by Stripe. We do not store your full card details.</li>
+            <li><strong>Hosting providers.</strong> We use cloud hosting to run the service. These providers may process data under written agreements.</li>
+            <li><strong>When required by law.</strong> We may disclose data in response to legal process or as required by applicable law.</li>
           </ul>
 
+          <h2>Data retention</h2>
+          <p>We keep your data only as long as needed to provide the service and as described here, or as required by law. You can delete your account and all associated data at any time from your account settings or by contacting us. Once deleted, your data cannot be recovered.</p>
+
+          <h2>Your rights (GDPR and CCPA)</h2>
+          <p>Depending on where you live, you may have the following rights regarding your personal data:</p>
+          <ul>
+            <li><strong>Access.</strong> You can request a copy of the personal data we hold about you.</li>
+            <li><strong>Correction.</strong> You can request that we correct inaccurate or incomplete data.</li>
+            <li><strong>Deletion.</strong> You can request deletion of your account and all associated data.</li>
+            <li><strong>Opt-out.</strong> You can opt out of the sale or sharing of your data (we do not sell data, but you can submit an opt-out request for our records).</li>
+            <li><strong>Withdraw consent.</strong> You can withdraw consent for data processing at any time by deleting your account.</li>
+          </ul>
+          <p>To exercise any of these rights, contact <a href="mailto:support@revidinc.com">support@revidinc.com</a>. We will respond within 30 days.</p>
+
           <h2>Security</h2>
-          <p>We use reasonable technical and organizational measures to protect your data. No method of transmission or storage is completely secure, but we work to keep your information safe.</p>
+          <p>We use reasonable technical and organizational measures to protect your data, including HTTPS encryption for data in transit, salted password hashing (pbkdf2-sha256 with 100,000 rounds), JWT-based authentication, and access controls. No method of transmission or storage is completely secure, but we work to keep your information safe.</p>
 
           <h2>Children</h2>
-          <p>REVID is not directed at children under 16, and we do not knowingly collect data from them.</p>
+          <p>REVID is not directed at children under 16, and we do not knowingly collect data from them. If you believe we have collected data from a child, contact <a href="mailto:support@revidinc.com">support@revidinc.com</a> and we will delete it.</p>
 
           <h2>Contact</h2>
-          <p>Questions about this policy? Email <a href="mailto:support@revidinc.com">support@revidinc.com</a> or write to REVID, Wyoming, U.S.</p>
+          <p>Questions about this policy? Email <a href="mailto:support@revidinc.com">support@revidinc.com</a> or <a href="mailto:legal@revidinc.com">legal@revidinc.com</a>, or write to REVID LLC, Wyoming, U.S.</p>
         </div>
       </section>
     </main>
