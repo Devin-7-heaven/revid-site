@@ -434,21 +434,15 @@
         window.addEventListener('scroll', onScroll, { passive: true });
       })();
 
-      // Reveal on scroll (progressive enhancement — content visible by default)
+      // Reveal on scroll (progressive enhancement — content always visible)
       (function () {
         var els = document.querySelectorAll('[data-reveal]');
         if (!els.length) return;
-        // Only hide elements if JS + IntersectionObserver are available
         if (!('IntersectionObserver' in window)) return;
-        els.forEach(function (e) { e.classList.add('reveal-hidden'); });
         var io = new IntersectionObserver(function (entries) {
           entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
         }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
         els.forEach(function (e) { io.observe(e); });
-        // Fallback: reveal all after 2s in case observer doesn't fire
-        setTimeout(function () {
-          document.querySelectorAll('[data-reveal].reveal-hidden:not(.in)').forEach(function (e) { e.classList.add('in'); });
-        }, 2000);
       })();
     </script>
   </body>
