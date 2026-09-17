@@ -127,8 +127,17 @@
 .hero__grid { display: grid; gap: clamp(var(--space-10), 5vw, var(--space-16)); align-items: center; }
 @media (min-width: 920px) { .hero__grid { grid-template-columns: 1.05fr .95fr; } }
 .hero__title { font-size: var(--text-2xl); margin-bottom: var(--space-5); }
-.hero__sub { font-size: var(--text-lg); color: var(--color-text-muted); max-width: 46ch; margin-bottom: var(--space-8); }
+.hero__sub { font-size: var(--text-lg); color: var(--color-text-muted); max-width: 46ch; margin-bottom: var(--space-6); }
 .hero__cta { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; margin-bottom: var(--space-5); }
+
+/* Vehicle gate form */
+.vehicle-gate { background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-5); margin-bottom: var(--space-6); }
+.vehicle-gate__label { font-size: var(--text-sm); font-weight: 600; color: var(--color-text-muted); margin-bottom: var(--space-3); }
+.vehicle-gate__inputs { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+.vehicle-gate__input { flex: 1; min-width: 80px; padding: var(--space-3) var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-bg); color: var(--color-text); font-size: var(--text-sm); font-family: var(--font-body); }
+.vehicle-gate__input:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px var(--color-primary-ring); }
+.vehicle-gate__input--year { max-width: 90px; }
+.vehicle-gate .btn { flex-shrink: 0; }
 .hero__trust { display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-6); color: var(--color-text-muted); font-size: var(--text-sm); }
 .hero__trust li { display: flex; align-items: center; gap: var(--space-2); }
 .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--color-success); flex: none; }

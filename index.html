@@ -60,6 +60,15 @@
               <p class="eyebrow"><span class="dot"></span> Diagnose · Decide · Save</p>
               <h1 class="hero__title">Know before you wrench or call a shop.</h1>
               <p class="hero__sub">REVID reads your check-engine codes and live vehicle data, then gives you a likely cause, a fix path, and a cost estimate — matched to your skill level. So you know whether to fix it yourself or hand it off.</p>
+              <form class="vehicle-gate" id="vehicle-gate" onsubmit="return redirectToApp(event)">
+                <p class="vehicle-gate__label">Start with your vehicle</p>
+                <div class="vehicle-gate__inputs">
+                  <input type="text" id="vg-year" inputmode="numeric" placeholder="Year" maxlength="4" class="vehicle-gate__input vehicle-gate__input--year" required />
+                  <input type="text" id="vg-make" placeholder="Make" class="vehicle-gate__input" required />
+                  <input type="text" id="vg-model" placeholder="Model" class="vehicle-gate__input" required />
+                  <button type="submit" class="btn btn--primary">Start diagnosis</button>
+                </div>
+              </form>
               <div class="hero__cta">
                 <a class="btn btn--primary btn--lg" href="https://app.revidinc.com" target="_blank" rel="noopener noreferrer">Launch REVID — free in early access</a>
                 <a class="btn btn--ghost btn--lg" href="#how">See how it works</a>
@@ -449,6 +458,18 @@
         }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
         els.forEach(function (e) { io.observe(e); });
       })();
+
+      // Vehicle gate redirect to app with vehicle pre-filled
+      function redirectToApp(e) {
+        e.preventDefault();
+        var year = document.getElementById('vg-year').value.trim();
+        var make = document.getElementById('vg-make').value.trim();
+        var model = document.getElementById('vg-model').value.trim();
+        if (!year || !make || !model) return false;
+        var vehicle = encodeURIComponent(year + ' ' + make + ' ' + model);
+        window.open('https://app.revidinc.com/?vehicle=' + vehicle, '_blank', 'noopener');
+        return false;
+      }
     </script>
   </body>
 </html>
