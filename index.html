@@ -34,6 +34,7 @@
         <nav class="header__nav" aria-label="Primary">
           <a href="#how">How it works</a>
           <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
           <a href="#faq">FAQ</a>
         </nav>
         <div class="header__actions">
@@ -277,10 +278,57 @@
       <section class="section">
         <div class="container">
           <div class="band" data-reveal>
-            <p class="eyebrow">Early access</p>
-            <h2 class="band__title">REVID is free during launch.</h2>
-            <p class="band__text">We're in early access and refining the experience with real drivers. No paid plan yet, no credit card to start — just plug in and try it.</p>
+            <p class="eyebrow">Get started</p>
+            <h2 class="band__title">Try REVID free. Upgrade when you're ready.</h2>
+            <p class="band__text">Start with free code lookup, VIN decoding, and symptom guides. Upgrade to Pro for AI-powered diagnostics and live engine data — $9.99/month or $99/year.</p>
             <a class="btn btn--primary btn--lg" href="https://app.revidinc.com" target="_blank" rel="noopener noreferrer">Launch REVID</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section class="section" id="pricing">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">Pricing</p>
+            <h2 class="section-title">Free to start. Pro when you're ready.</h2>
+            <p class="section-lead">No credit card needed to try. Upgrade to Pro for AI-powered diagnostics and live data.</p>
+          </div>
+          <div class="pricing">
+            <div class="pricing__card" data-reveal>
+              <div class="pricing__head">
+                <h3 class="pricing__name">Free</h3>
+                <div class="pricing__price"><span class="pricing__amount">$0</span><span class="pricing__per">/forever</span></div>
+              </div>
+              <p class="pricing__blurb">Everything you need to read codes and understand what they mean.</p>
+              <ul class="pricing__list" role="list">
+                <li><span class="check">✓</span> OBD-II code lookup</li>
+                <li><span class="check">✓</span> VIN decoder</li>
+                <li><span class="check">✓</span> Guided symptom checker</li>
+                <li><span class="check">✓</span> Cost estimates</li>
+                <li><span class="check">✓</span> Vehicle comparison</li>
+                <li><span class="check">✓</span> Recall and TSB lookup</li>
+              </ul>
+              <a class="btn btn--ghost btn--block" href="https://app.revidinc.com" target="_blank" rel="noopener noreferrer">Get started free</a>
+            </div>
+            <div class="pricing__card pricing__card--featured" data-reveal>
+              <div class="pricing__badge">Best value</div>
+              <div class="pricing__head">
+                <h3 class="pricing__name">REVID Pro</h3>
+                <div class="pricing__price"><span class="pricing__amount">$9.99</span><span class="pricing__per">/month</span></div>
+              </div>
+              <p class="pricing__blurb">AI-powered diagnostics that read your live data and tell you what's wrong — in plain English.</p>
+              <ul class="pricing__list" role="list">
+                <li><span class="check">✓</span> Everything in Free</li>
+                <li><span class="check">✓</span> AI diagnostic chat (50/day)</li>
+                <li><span class="check">✓</span> Live OBD-II engine data</li>
+                <li><span class="check">✓</span> Cross-vehicle comparison</li>
+                <li><span class="check">✓</span> Multi-language support (EN/ES/FR/PT)</li>
+                <li><span class="check">✓</span> Priority email support</li>
+              </ul>
+              <a class="btn btn--primary btn--block" href="https://app.revidinc.com" target="_blank" rel="noopener noreferrer">Start Pro free trial</a>
+              <p class="pricing__annual">or <strong>$99/year</strong> — save 2 months</p>
+            </div>
           </div>
         </div>
       </section>
@@ -386,14 +434,21 @@
         window.addEventListener('scroll', onScroll, { passive: true });
       })();
 
-      // Reveal on scroll
+      // Reveal on scroll (progressive enhancement — content visible by default)
       (function () {
         var els = document.querySelectorAll('[data-reveal]');
-        if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+        if (!els.length) return;
+        // Only hide elements if JS + IntersectionObserver are available
+        if (!('IntersectionObserver' in window)) return;
+        els.forEach(function (e) { e.classList.add('reveal-hidden'); });
         var io = new IntersectionObserver(function (entries) {
           entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
         }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
         els.forEach(function (e) { io.observe(e); });
+        // Fallback: reveal all after 2s in case observer doesn't fire
+        setTimeout(function () {
+          document.querySelectorAll('[data-reveal].reveal-hidden:not(.in)').forEach(function (e) { e.classList.add('in'); });
+        }, 2000);
       })();
     </script>
   </body>
